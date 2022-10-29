@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500');
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+@mixin user-select {
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,500");
+@-webkit-keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    -webkit-transition: -webkit-transform 20s;
+    transition: -webkit-transform 20s;
+    transition: transform 20s;
+    transition: transform 20s, -webkit-transform 20s;
+  }
+}
+@keyframes spin-earth {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    -webkit-transition: -webkit-transform 20s;
+    transition: -webkit-transform 20s;
+    transition: transform 20s;
+    transition: transform 20s, -webkit-transform 20s;
+  }
+}
+
+@-webkit-keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+    transform: translate(-160px, -160px);
+  }
+}
+
+@keyframes move-astronaut {
+  100% {
+    -webkit-transform: translate(-160px, -160px);
+    transform: translate(-160px, -160px);
+  }
+}
+
+@-webkit-keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+
+@keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+  background-image: url("../img/overlay_stars.svg"), url("../img/bg_purple.png");
+}
+
+html header, body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+html ul, body ul {
+  list-style-type: none;
+}
+
+html ul li, body ul li {
+  display: inline-block;
+  margin-left: 20px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+html ul li a, body ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+html ul li a:hover, body ul li a:hover {
+  color: #fff;
+}
+
+html ul li:last-child, body ul li:last-child {
+  border: 1px solid #FFCB39;
+  border-radius: 20px;
+  padding: 10px 25px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+html ul li:last-child:hover, body ul li:last-child:hover {
+  background-color: #FFCB39;
+  color: #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+html .logo, body .logo {
+  width: 80px;
+}
+
+html .earth-moon, body .earth-moon {
+  position: relative;
+  height: 150px;
+}
+
+html .earth-moon .object_moon, body .earth-moon .object_moon {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+}
+
+html .earth-moon .object_earth, body .earth-moon .object_earth {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  -webkit-animation: spin-earth 100s infinite linear both;
+          animation: spin-earth 100s infinite linear both;
+}
+
+html .text-container, body .text-container {
+  text-align: center;
+}
+
+html .text-container a, body .text-container a {
+  margin: 15px auto;
+  display: block;
+  width: 140px;
+  padding: 10px 15px;
+  border: 1px solid #FFCB39;
+  border-radius: 100px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 11px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+html .text-container a:hover, body .text-container a:hover {
+  background-color: #FFCB39;
+  color: #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+html .box_astronaut, body .box_astronaut {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  will-change: transform;
+  -webkit-animation: move-astronaut 50s infinite linear both alternate;
+          animation: move-astronaut 50s infinite linear both alternate;
+}
+
+html .box_astronaut .object_astronaut, body .box_astronaut .object_astronaut {
+  -webkit-animation: rotate-astronaut 200s infinite linear both alternate;
+          animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+@media screen and (max-width: 540px) {
+  header {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  header ul {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
